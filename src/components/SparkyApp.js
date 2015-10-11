@@ -1,64 +1,69 @@
 'use strict';
 
-var React = require('react/addons');
-var ReactTransitionGroup = React.addons.TransitionGroup;
-var Slicey = require('./Slicey');
+let React = require('react/addons');
+let ReactTransitionGroup = React.addons.TransitionGroup;
+let Slicey = require('./Slicey');
 
 // CSS
 require('normalize.css');
 require('../styles/main.css');
 
-var statuses = ['warning', 'positive', 'negative', 'info'];
+let statuses = ['warning', 'positive', 'negative', 'info'];
 
-var getTestData = function() {
+let getTestData = function() {
   return statuses.map(function(status) {
     return {
       status: status,
-      value: Math.random()
+      value: Math.random(),
     };
   });
 };
 
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame ||
+window.requestAnimFrame = (function() {
+  return window.requestAnimationFrame ||
           window.webkitRequestAnimationFrame ||
           window.mozRequestAnimationFrame ||
           window.oRequestAnimationFrame ||
           window.msRequestAnimationFrame ||
-          function(/* function FrameRequestCallback */ callback, /* DOMElement Element */ element){
+          function(/* function FrameRequestCallback */ callback) {
             window.setTimeout(callback, 1000 / 60);
           };
 })();
 
-var SparkyApp = React.createClass({
+let SparkyApp = React.createClass({
   getInitialState: function() {
     return {testData: getTestData()};
   },
+
   componentDidMount: function() {
-    var _this = this;
-    var animRenderer = function() {
-      (function looper(){
+    let _this = this;
+    let animRenderer = function() {
+      (function looper() {
         _this.bar();
         window.requestAnimFrame(looper);
       })();
     };
+
     window.addEventListener('click', animRenderer);
   },
+
   componentWillUnMount: function() {
     window.removeEventListener('click', this.bar);
   },
-  bar: function(event) {
+
+  bar: function() {
     this.setState({testData: getTestData()});
   },
+
   render: function() {
     return (
       <div className='main'>
-        <ReactTransitionGroup transitionName="fade">
+        <ReactTransitionGroup transitionName='fade'>
           <Slicey dataset={this.state.testData} donut={true} diameter={100}/>
         </ReactTransitionGroup>
       </div>
     );
-  }
+  },
 });
 React.render(<SparkyApp />, document.getElementById('content')); // jshint ignore:line
 

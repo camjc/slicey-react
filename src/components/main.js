@@ -1,3 +1,4 @@
+/* @flow */
 'use strict';
 
 var SparkyApp = require('./SparkyApp');
@@ -9,10 +10,10 @@ var content = document.getElementById('content');
 
 var Routes = (
   <Route handler={SparkyApp}>
-    <Route name="/" handler={SparkyApp}/>
+    <Route name='/' handler={SparkyApp}/>
   </Route>
 );
 
-Router.run(Routes, function (Handler) {
+Router.run(Routes, function(Handler) {
   React.render(<Handler/>, content);
 });
