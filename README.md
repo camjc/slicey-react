@@ -1,4 +1,5 @@
 # slicey-react
+
 Slicey Donut/Pie chart library written in react-js
 
 NOTE: This repo needs some love to get it up-to-date with modern standards.

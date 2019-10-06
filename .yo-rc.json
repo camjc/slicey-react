@@ -1,7 +1,0 @@
-{
-  "generator-react-webpack": {
-    "app-name": "sparky",
-    "architecture": false,
-    "styles-language": "scss"
-  }
-}
