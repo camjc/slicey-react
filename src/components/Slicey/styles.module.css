@@ -1,0 +1,29 @@
+.slicey {
+  vertical-align: top;
+  margin: 30px;
+}
+
+.background {
+  fill: #555;
+}
+
+.positive {
+  fill: #95ac7c;
+}
+
+.negative {
+  fill: #bc601d;
+}
+
+.info {
+  fill: #bea552;
+}
+
+.warning,
+.pending {
+  fill: #efe6c0;
+}
+
+.donut {
+  fill: #fff;
+}

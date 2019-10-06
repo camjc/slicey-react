@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders svg with a dataset (mounted) 1`] = `
+<Slicey
+  dataset={
+    Array [
+      Object {
+        "status": "warning",
+        "value": 50,
+      },
+      Object {
+        "status": "error",
+        "value": 20,
+      },
+    ]
+  }
+  diameter={100}
+  hasDonut={false}
+>
+  <svg
+    height={100}
+    viewBox="-0.5 -0.5 1 1"
+    width={100}
+  >
+    <circle
+      cx="0"
+      cy="0"
+      r=".49"
+    />
+    <SliceyArc
+      color="warning"
+      key="0"
+      largeArcFlag={1}
+      x1={3.061616997868383e-17}
+      x2={-0.4874639560909118}
+      y1={-0.5}
+      y2={0.11126046697815725}
+    >
+      <path
+        d="M0,0 L3.061616997868383e-17,-0.5 A0.5,0.5 0 1,1 -0.4874639560909118,0.11126046697815725 z"
+      />
+    </SliceyArc>
+    <SliceyArc
+      color="error"
+      key="1"
+      largeArcFlag={0}
+      x1={-0.4874639560909118}
+      x2={-9.184850993605148e-17}
+      y1={0.11126046697815725}
+      y2={-0.5}
+    >
+      <path
+        d="M0,0 L-0.4874639560909118,0.11126046697815725 A0.5,0.5 0 0,1 -9.184850993605148e-17,-0.5 z"
+      />
+    </SliceyArc>
+  </svg>
+</Slicey>
+`;
+
+exports[`renders svg with a dataset 1`] = `
+<svg
+  height={100}
+  viewBox="-0.5 -0.5 1 1"
+  width={100}
+>
+  <circle
+    cx="0"
+    cy="0"
+    r=".49"
+  />
+  <SliceyArc
+    color="warning"
+    key="0"
+    largeArcFlag={1}
+    x1={3.061616997868383e-17}
+    x2={-0.4874639560909118}
+    y1={-0.5}
+    y2={0.11126046697815725}
+  />
+  <SliceyArc
+    color="error"
+    key="1"
+    largeArcFlag={0}
+    x1={-0.4874639560909118}
+    x2={-9.184850993605148e-17}
+    y1={0.11126046697815725}
+    y2={-0.5}
+  />
+</svg>
+`;
