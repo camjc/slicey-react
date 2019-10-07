@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a donut 1`] = `
+<svg
+  className="sc-AykKD fdPUjU"
+  height={100}
+  viewBox="-0.5 -0.5 1 1"
+  width={100}
+>
+  <circle
+    className="sc-AykKE bsVLtZ"
+    cx="0"
+    cy="0"
+    r=".49"
+  />
+  <path
+    className="sc-AykKC cogACk"
+    d="M0,0 L3.061616997868383e-17,-0.5 A0.5,0.5 0 1,1 -0.4874639560909118,0.11126046697815725 z"
+  />
+  <path
+    className="sc-AykKC cogACk"
+    d="M0,0 L-0.4874639560909118,0.11126046697815725 A0.5,0.5 0 0,1 -9.184850993605148e-17,-0.5 z"
+  />
+  <circle
+    className="sc-AykKF bMWgYR"
+    cx="0"
+    cy="0"
+    r=".25"
+  />
+</svg>
+`;
+
+exports[`renders null without a dataset 1`] = `null`;
+
+exports[`renders svg with a dataset 1`] = `
+<svg
+  className="sc-AykKD fdPUjU"
+  height={100}
+  viewBox="-0.5 -0.5 1 1"
+  width={100}
+>
+  <circle
+    className="sc-AykKE bsVLtZ"
+    cx="0"
+    cy="0"
+    r=".49"
+  />
+  <path
+    className="sc-AykKC cogACk"
+    d="M0,0 L3.061616997868383e-17,-0.5 A0.5,0.5 0 1,1 -0.4874639560909118,0.11126046697815725 z"
+  />
+  <path
+    className="sc-AykKC cogACk"
+    d="M0,0 L-0.4874639560909118,0.11126046697815725 A0.5,0.5 0 0,1 -9.184850993605148e-17,-0.5 z"
+  />
+</svg>
+`;
